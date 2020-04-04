@@ -30,19 +30,19 @@ private slots:
     void recvSuccess();
     void recvClearList();
 
-    void on_connectButton_clicked();
-    void on_downButton_clicked();
-    void on_upButton_clicked();
-    void on_fileTree_itemDoubleClicked(QTreeWidgetItem *item, int column);
-    void on_renameButton_clicked();
-    void on_pushButton_2_clicked();
+    void on_connectButton_clicked();    // 下载按键
+    void on_downButton_clicked();       // 连接按键
+    void on_upButton_clicked();         // 上传按键
+    void on_renameButton_clicked();     // 重命名按键
+    void on_deleteButton_clicked();     // 删除按键
+    void on_newButton_clicked();        // 新建按键
 
-    void on_newButton_clicked();
+    void on_fileTree_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
 private:
     Ui::ftpClient *ui;
-    ClientThread* clientThread;
-    bool connected = false;
+    ClientThread* m_clientThread;
+    bool m_connected = false;       // 连接状态
     QString allInfo;
 };
 
